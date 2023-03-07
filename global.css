@@ -300,7 +300,7 @@ html,body{
 }
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 850px) {
 
 .general{
     height: 200px;
