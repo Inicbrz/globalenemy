@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,body{
+	height: 100%;
+}
+
+
+.background-global-enemy{
+    background-color: rgb(33, 19, 61);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -1000;
+    background-size: cover;
+}
+
+
+.botaodecorsol{
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.botaodecorlua{
+    background-color: rgb(36, 36, 36);
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    top: 40px;
+    left: 20px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+
+.section-global-enemy{
+    height: 500px;
+    width: 700px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: transparent;
+}
+
+
+/* PERFILS */
+
+.general{
+    height: 300px;
+    width: 400px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.general:hover{
+    height: 435px;
+}
+
+.general:hover > .socialmedias{
+    display: flex;
+    opacity: 100%;
+}
+
+.general:hover > .pprofile{
+    opacity: 0%;
+}
+
+.general>.pprofile{
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 520;
+    opacity: 100%;
+    transition: 0.4s;
+}
+
+.general:hover > .buttonprofile>a>button{
+    opacity: 100%;
+}
+
+.buttonprofile{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.buttonprofile>a>button{
+    position: relative;
+    top: -10px;
+    margin: 0 auto;
+    border-radius: 50px;
+    width: 300px;
+    height: 60px;
+    background-color: rgb(33, 19, 61);
+    color: white;
+    font-size: 16px;
+    border: 2px solid white;
+    opacity: 0%;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+
+.profile-nic{
+    background-color: rgb(255, 255, 255);
+}
+
+.profile-yran{
+    background-color: rgb(255, 255, 255);
+    display: none;
+}
+
+.profile-miguel{
+    background-color: rgb(255, 255, 255);
+    display: none;
+}
+
+/*FOTO PARA OS PERFIL*/
+    
+.picturespace{
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    margin: 30px auto;
+    background-image: url(pictureno.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-color: rgb(33, 19, 61);
+
+}
+
+/*Social Medias*/
+    
+.socialmedias{
+    height: 60px;
+    width: 300px;
+    position: relative;
+    top: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+}
+
+
+/* ESTILIZAÇAO DOS BOTOES */
+
+.front-to-yran{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    margin-top: 230px;
+    margin-right: 20px;
+    float: right;
+    background-color: wheat;
+    display: block;
+    cursor: pointer;
+}
+
+
+.front-to-miguel{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    margin-top: 230px;
+    margin-right: 20px;
+    float: right;
+    background-color: wheat;
+    display: none;
+    cursor: pointer;
+}
+
+.back-to-nic{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    margin-top: 230px;
+    margin-left: 20px;
+    float: left;
+    background-color: wheat;
+    cursor: pointer;
+    display: none;
+}
+
+.back-to-yran{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    margin-top: 230px;
+    margin-left: 20px;
+    float: left;
+    background-color: wheat;
+    cursor: pointer;
+    display: none;
+}
+
+.generalbuttonfront::after{
+    content: "";
+    display: block;
+    position: relative;
+    left: 27px;
+    top: -2px;
+    height: 25px;
+    width: 10px;
+    transform: rotate(220deg);
+    background-color: gray;
+}
+
+.generalbuttonfront::before{
+    content: "";
+    display: block;
+    position: relative; 
+    left: 25px;
+    top: 12px;
+    height: 25px;
+    width: 10px;
+    transform: rotate(130deg);
+    background-color: #2f004e;
+}
+
+.generalbuttonback::after{
+    content: "";
+    display: block;
+    position: relative;
+    left: 21px;
+    top: -13px;
+    height: 25px;
+    width: 10px;
+    transform: rotate(220deg);
+    background-color: gray;
+}
+
+.generalbuttonback::before{
+    content: "";
+    display: block;
+    position: relative; 
+    left: 23px;
+    top: 23px;
+    height: 25px;
+    width: 10px;
+    transform: rotate(130deg);
+    background-color: #2f004e;
+}
+
+/* AREA DO JS */
+
+
+.section-global-enemy.activ .profile-nic , .section-global-enemy.activ .front-to-yran{
+    display: none;
+}
+
+.section-global-enemy.activ .profile-yran , .section-global-enemy.activ .back-to-nic , .section-global-enemy.activ .front-to-miguel{
+    display: block;
+}
+
+.section-global-enemy.acti .profile-miguel , .section-global-enemy.acti .back-to-yran{
+    display: block;
+}
+
+.section-global-enemy.acti .front-to-miguel , .section-global-enemy.acti .front-to-yran{
+    display: none;
+}
+
+
+
