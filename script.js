@@ -26,6 +26,12 @@ const irparayran = document.querySelector('.front-to-yran');
 const voltarparanic = document.querySelector('.back-to-nic');
 const irparamiguel = document.querySelector('.front-to-miguel');
 const voltarparayran = document.querySelector('.back-to-yran');
+const geral = document.querySelector('.general');
+const geraldenovo = document.querySelector('.profile-yran');
+const geraldenovodois = document.querySelector('.profile-miguel');
+
+
+
 
 
 irparayran.addEventListener('click', ()=> {
@@ -45,6 +51,38 @@ voltarparayran.addEventListener('click', ()=> {
     profiles.classList.remove('acti');
     profiles.classList.add('activ');
 });
+
+
+
+
+geral.addEventListener('click', ()=> {
+    profiles.classList.add('mobiletest');
+});
+
+geraldenovo.addEventListener('click', ()=> {
+    profiles.classList.add('mobiletest');
+});
+
+geraldenovodois.addEventListener('click', ()=> {
+    profiles.classList.add('mobiletest');
+});
+
+irparayran.addEventListener('click', ()=> {
+    profiles.classList.remove('mobiletest');
+});
+
+irparamiguel.addEventListener('click', ()=> {
+    profiles.classList.remove('mobiletest');
+});
+
+voltarparanic.addEventListener('click', ()=> {
+    profiles.classList.remove('mobiletest');
+});
+
+voltarparayran.addEventListener('click', ()=> {
+    profiles.classList.remove('mobiletest');
+});
+
 
 
 

@@ -158,6 +158,10 @@ html,body{
     background-color: transparent;
 }
 
+.socialmediaimg{
+    width: 50px;
+}
+
 
 /* ESTILIZAÇAO DOS BOTOES */
 
@@ -168,7 +172,7 @@ html,body{
     margin-top: 230px;
     margin-right: 20px;
     float: right;
-    background-color: wheat;
+    background-color: white;
     display: block;
     cursor: pointer;
 }
@@ -181,7 +185,7 @@ html,body{
     margin-top: 230px;
     margin-right: 20px;
     float: right;
-    background-color: wheat;
+    background-color: white;
     display: none;
     cursor: pointer;
 }
@@ -193,7 +197,7 @@ html,body{
     margin-top: 230px;
     margin-left: 20px;
     float: left;
-    background-color: wheat;
+    background-color: white;
     cursor: pointer;
     display: none;
 }
@@ -205,7 +209,7 @@ html,body{
     margin-top: 230px;
     margin-left: 20px;
     float: left;
-    background-color: wheat;
+    background-color: white;
     cursor: pointer;
     display: none;
 }
@@ -277,5 +281,226 @@ html,body{
     display: none;
 }
 
+.background-global-enemy.active{
+    background-color: #c47af5;
+}
 
 
+.section-global-enemy.active .general>.buttonprofile>a>button{
+    background-color: #c47af5;
+}
+
+
+.section-global-enemy.active .generalbuttonfront::before{
+    background-color: #c47af5;
+}
+
+.section-global-enemy.active .generalbuttonback::before{
+    background-color: #c47af5;
+}
+
+
+@media only screen and (max-width: 400px) {
+
+.general{
+    height: 200px;
+    width: 290px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.general:hover{
+    height: 200px;
+}
+
+.general:hover > .socialmedias{
+    display: none;
+    opacity: 0%;
+}
+
+.general:hover > .pprofile{
+    opacity: 100%;
+}
+
+.general>.pprofile{
+    text-align: center;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 520;
+    opacity: 100%;
+    transition: 0.4s;
+}
+
+.general:hover > .buttonprofile>a>button{
+    opacity: 0%;
+}
+
+.buttonprofile{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.buttonprofile>a>button{
+    position: relative;
+    top: -23px;
+    margin: 0 auto;
+    border-radius: 50px;
+    width: 200px;
+    height: 40px;
+    background-color: rgb(33, 19, 61);
+    color: white;
+    font-size: 16px;
+    border: 2px solid white;
+    opacity: 0%;
+    transition: 0.1s;
+    display: none;
+    cursor: pointer;
+}
+
+
+.profile-nic{
+    background-color: rgb(255, 255, 255);
+}
+
+.profile-yran{
+    background-color: rgb(255, 255, 255);
+    display: none;
+}
+
+.profile-miguel{
+    background-color: rgb(255, 255, 255);
+    display: none;
+}
+
+/*FOTO PARA OS PERFIL*/
+    
+.picturespace{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    margin: 30px auto;
+    background-image: url(pictureno.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-color: rgb(33, 19, 61);
+
+}
+
+/*Social Medias*/
+    
+.socialmedias{
+    height: 60px;
+    width: 200px;
+    position: relative;
+    top: -10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+    display: none;
+}
+
+.socialmediaimg{
+    width: 30px;
+}
+
+
+/* ESTILIZAÇAO DOS BOTOES */
+
+.front-to-yran{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    margin-top: 490px;
+    margin-right: 240px;
+    float: right;
+    background-color: white;
+    display: block;
+    cursor: pointer;
+}
+
+
+.front-to-miguel{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    margin-top: 490px;
+    margin-right: 240px;
+    float: right;
+    background-color: white;
+    display: none;
+    cursor: pointer;
+}
+
+.back-to-nic{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    margin-top: 490px;
+    margin-left: 240px;
+    float: left;
+    background-color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.back-to-yran{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    margin-top: 490px;
+    margin-left: 240px;
+    float: left;
+    background-color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.section-global-enemy.mobiletest .general{
+    height: 250px;
+}
+
+.section-global-enemy.mobiletest .profile-miguel{
+    height: 250px;
+}
+
+.section-global-enemy.mobiletest .profile-yran{
+    height: 250px;
+}
+
+.section-global-enemy.mobiletest .general>.socialmedias{
+    display: flex;
+    opacity: 100%;
+}
+
+.section-global-enemy.mobiletest .general>.buttonprofile>a>button{
+    opacity: 100%;
+    display: block;
+
+}
+
+.background-global-enemy.active{
+    background-color: #c47af5;
+}
+
+
+.section-global-enemy.active .general>.buttonprofile>a>button{
+    background-color: #c47af5;
+}
+
+
+.section-global-enemy.active .generalbuttonfront::before{
+    background-color: #c47af5;
+}
+
+.section-global-enemy.active .generalbuttonback::before{
+    background-color: #c47af5;
+}
+
+}   
