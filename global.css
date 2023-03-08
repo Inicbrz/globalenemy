@@ -10,19 +10,20 @@ html,body{
 }
 
 .background-global-enemyimage{
-    background-image: url(wall.jpg);
+    background-image: url(space.png);
     background-size: cover;
-    opacity: 20%;
+    opacity: 10%;
     height: 100%;
     width: 100%;
     position: absolute;
     z-index: 0;
     background-size: cover;
+    filter: blur(2px);
 }
 
 
 .background-global-enemy{
-    background-color: rgb(33, 19, 61);
+    background-color: rgb(45, 65, 105);
     height: 100%;
     width: 100%;
     z-index: -1000;
@@ -31,25 +32,37 @@ html,body{
 
 
 .botaodecorsol{
-    background-color: #c5c5c5;
-    height: 30px;
-    width: 30px;
+    background-image: url(day.png);
+    background-size: cover;
+    height: 40px;
+    width: 40px;
     position: fixed;
+    z-index: 1;
     top: 20px;
     left: 20px;
     border-radius: 100%;
     cursor: pointer;
 }
 
+.botaodecorsol.ativar{
+    display: none;
+}
+
+.botaodecorlua.ativar{
+    display: block;
+}
+
 .botaodecorlua{
-    background-color: rgb(33, 19, 61);
-    height: 30px;
-    width: 30px;
+    background-image: url(moon.png);
+    background-size: cover;
+    height: 40px;
+    width: 40px;
     position: fixed;
-    top: 50px;
+    top: 20px;
     left: 20px;
     border-radius: 100%;
     cursor: pointer;
+    display: none;
 }
 
 
@@ -76,6 +89,8 @@ html,body{
     border-radius: 20px;
     transition: 1s;
     overflow: hidden;
+    border: 4px solid white;
+    box-sizing: content-box;
 }
 
 .general:hover{
@@ -98,6 +113,7 @@ html,body{
     font-weight: 520;
     opacity: 100%;
     transition: 0.4s;
+    color: white;
 }
 
 .general:hover > .buttonprofile>a>button{
@@ -116,10 +132,10 @@ html,body{
     border-radius: 50px;
     width: 300px;
     height: 60px;
-    background-color: rgb(28, 21, 61);
-    color: white;
+    background-color: #fffafa;
+    color: RGB(112, 136, 183);
     font-size: 16px;
-    border: 2px solid white;
+    border: 2px solid #fffafa;
     opacity: 0%;
     transition: 0.1s;
     cursor: pointer;
@@ -127,16 +143,16 @@ html,body{
 
 
 .profile-nic{
-    background-color: rgb(255, 255, 255);
+    background-color: RGB(112, 136, 183);
 }
 
 .profile-yran{
-    background-color: rgb(255, 255, 255);
+    background-color: RGB(112, 136, 183);
     display: none;
 }
 
 .profile-miguel{
-    background-color: rgb(255, 255, 255);
+    background-color: RGB(112, 136, 183);
     display: none;
 }
 
@@ -180,6 +196,9 @@ html,body{
 
 .socialmediaimg{
     width: 50px;
+    border: 3px solid white;
+    box-sizing: content-box;
+    border-radius: 50px;
 }
 
 
@@ -192,9 +211,12 @@ html,body{
     margin-top: 230px;
     margin-right: 20px;
     float: right;
-    background-color: white;
+    background-color: RGB(112, 136, 183);
     display: block;
     cursor: pointer;
+    border: 2px;
+    border: 4px solid white;
+    box-sizing: content-box;
 }
 
 
@@ -205,9 +227,11 @@ html,body{
     margin-top: 230px;
     margin-right: 20px;
     float: right;
-    background-color: white;
+    background-color: RGB(112, 136, 183);
     display: none;
     cursor: pointer;
+    border: 4px solid white;
+    box-sizing: content-box;
 }
 
 .back-to-nic{
@@ -217,9 +241,11 @@ html,body{
     margin-top: 230px;
     margin-left: 20px;
     float: left;
-    background-color: white;
+    background-color: RGB(112, 136, 183);
     cursor: pointer;
     display: none;
+    border: 4px solid white;
+    box-sizing: content-box;
 }
 
 .back-to-yran{
@@ -229,9 +255,11 @@ html,body{
     margin-top: 230px;
     margin-left: 20px;
     float: left;
-    background-color: white;
+    background-color: RGB(112, 136, 183);
     cursor: pointer;
     display: none;
+    border: 4px solid white;
+    box-sizing: content-box;
 }
 
 .generalbuttonfront::after{
@@ -243,7 +271,7 @@ html,body{
     height: 25px;
     width: 10px;
     transform: rotate(220deg);
-    background-color: gray;
+    background-color: rgb(255, 255, 255);
 }
 
 .generalbuttonfront::before{
@@ -255,7 +283,7 @@ html,body{
     height: 25px;
     width: 10px;
     transform: rotate(130deg);
-    background-color: rgb(28, 21, 61);
+    background-color: rgb(160, 185, 235);
 
 }
 
@@ -268,7 +296,7 @@ html,body{
     height: 25px;
     width: 10px;
     transform: rotate(220deg);
-    background-color: gray;
+    background-color: rgb(255, 255, 255);
 }
 
 .generalbuttonback::before{
@@ -280,7 +308,7 @@ html,body{
     height: 25px;
     width: 10px;
     transform: rotate(130deg);
-    background-color:rgb(28, 21, 61);
+    background-color:rgb(160, 185, 235);
 }
 
 /* AREA DO JS */
@@ -303,31 +331,41 @@ html,body{
 }
 
 .background-global-enemy.active{
-    background-color: #c5c5c5;
+    background-color: rgb(160, 185, 235);
 }
 
 .background-global-enemyimage.active{
-    opacity: 100%;
+    opacity: 10%;
 }
 
 
 .section-global-enemy.active .general>.buttonprofile>a>button{
-    background-color: #c5c5c5;
-    color: black;
+    background-color: #fffafa;
+    color: RGB(112, 136, 183);
 }
 
 
 .section-global-enemy.active .generalbuttonfront::before{
-    background-color: #000000;
+    background-color: rgb(160, 185, 235);
 }
 
 .section-global-enemy.active .generalbuttonback::before{
-    background-color: #000000;
+    background-color: rgb(160, 185, 235);
 }
 
 
 
 @media screen and  (max-width: 500px) {
+
+    .botaodecorlua{
+        height: 30px;
+        width: 30px;
+    }
+
+    .botaodecorsol{
+        height: 30px;
+        width: 30px;
+    }
 
 .background-global-enemyimage{
     cursor: pointer;
@@ -341,7 +379,7 @@ html,body{
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: red;
+    background-color: transparent;
     border-radius: 20px;
 }
     
@@ -397,10 +435,8 @@ html,body{
     border-radius: 50px;
     width: 200px;
     height: 40px;
-    background-color: rgb(33, 19, 61);
-    color: white;
     font-size: 16px;
-    border: 2px solid white;
+    border: 2px solid #fffafa;
     opacity: 0%;
     transition: 0.1s;
     display: none;
@@ -413,16 +449,16 @@ html,body{
 
 
 .profile-nic{
-    background-color: rgb(255, 255, 255);
+    background-color: RGB(112, 136, 183);
 }
 
 .profile-yran{
-    background-color: rgb(255, 255, 255);
+    background-color: RGB(112, 136, 183);
     display: none;
 }
 
 .profile-miguel{
-    background-color: rgb(255, 255, 255);
+    background-color: RGB(112, 136, 183);
     display: none;
 }
 
@@ -480,7 +516,7 @@ html,body{
     width: 60px;
     top: 80px;
     right: 0px;
-    background-color: white;
+    background-color: RGB(112, 136, 183);
     display: block;
     cursor: pointer;
 }
@@ -492,7 +528,7 @@ html,body{
     width: 60px;
     top: 80px;
     right: 0px;
-    background-color: white;
+    background-color: RGB(112, 136, 183);
     display: none;
     cursor: pointer;
 }
@@ -503,7 +539,7 @@ html,body{
     width: 60px;
     top: 80px;
     right: 200px;
-    background-color: white;
+    background-color: RGB(112, 136, 183);
     cursor: pointer;
     display: none;
 }
@@ -514,7 +550,7 @@ html,body{
     width: 60px;
     top: 80px;
     right: 200px;
-    background-color: white;
+    background-color: RGB(112, 136, 183);
     cursor: pointer;
     display: none;
 }
@@ -543,22 +579,22 @@ html,body{
 }
 
 .background-global-enemy.active{
-    background-color: #c5c5c5;
+    background-color: rgb(160, 185, 235);
 }
 
 
 .section-global-enemy.active .general>.buttonprofile>a>button{
-    background-color: #c5c5c5;
-    color: black;
+    background-color: #fffafa;
+    color: RGB(112, 136, 183);
 }
 
 
 .section-global-enemy.active .generalbuttonfront::before{
-    background-color: black;
+    background-color: rgb(160, 185, 235);
 }
 
 .section-global-enemy.active .generalbuttonback::before{
-    background-color: black;
+    background-color: rgb(160, 185, 235);
 }
 
 }   

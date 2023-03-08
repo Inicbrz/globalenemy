@@ -30,6 +30,23 @@ trocadecorlua.addEventListener('click', ()=> {
 });
 
 
+trocadecorsol.addEventListener('click', ()=> {
+    trocadecorsol.classList.add('ativar');
+});
+
+trocadecorsol.addEventListener('click', ()=> {
+    trocadecorlua.classList.add('ativar');
+});
+
+trocadecorlua.addEventListener('click', ()=> {
+    trocadecorsol.classList.remove('ativar');
+});
+
+trocadecorlua.addEventListener('click', ()=> {
+    trocadecorlua.classList.remove('ativar');
+});
+
+
 
 const irparayran = document.querySelector('.front-to-yran');
 const voltarparanic = document.querySelector('.back-to-nic');
