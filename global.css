@@ -28,6 +28,7 @@ html,body{
     width: 100%;
     z-index: -1000;
     background-size: cover;
+    transition: 0.4s;
 }
 
 
@@ -63,6 +64,7 @@ html,body{
     border-radius: 100%;
     cursor: pointer;
     display: none;
+    opacity: 100%;
 }
 
 
@@ -332,12 +334,12 @@ html,body{
 
 .background-global-enemy.active{
     background-color: rgb(160, 185, 235);
+    transition: 0.4s;
 }
 
 .background-global-enemyimage.active{
     opacity: 10%;
 }
-
 
 .section-global-enemy.active .general>.buttonprofile>a>button{
     background-color: #fffafa;
@@ -386,7 +388,7 @@ html,body{
 
 
 .general{
-    height: 200px;
+    height: 180px;
     width: 290px;
     transform: translate(-50%,-50%);
     position: absolute;
@@ -398,7 +400,7 @@ html,body{
 }
 
 .general:hover{
-    height: 200px;
+    height: 180px;
 }
 
 .general:hover > .socialmedias{
@@ -417,6 +419,8 @@ html,body{
     font-weight: 520;
     opacity: 100%;
     transition: 0.4s;
+    position: relative;
+    top: -7px;
 }
 
 .general:hover > .buttonprofile>a>button{
@@ -430,7 +434,7 @@ html,body{
 
 .buttonprofile>a>button{
     position: relative;
-    top: -23px;
+    top: -10px;
     margin: 0 auto;
     border-radius: 50px;
     width: 200px;
@@ -465,10 +469,10 @@ html,body{
 /*FOTO PARA OS PERFIL*/
     
 .picturespace{
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     border-radius: 100%;
-    margin: 30px auto;
+    margin: 20px auto;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0px;
@@ -495,7 +499,7 @@ html,body{
     height: 60px;
     width: 200px;
     position: relative;
-    top: -10px;
+    top: 10px;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
@@ -504,7 +508,7 @@ html,body{
 }
 
 .socialmediaimg{
-    width: 30px;
+    width: 40px;
 }
 
 
@@ -555,16 +559,22 @@ html,body{
     display: none;
 }
 
-.section-global-enemy.mobiletest .general{
-    height: 250px;
+
+.section-global-enemy.mobiletest .general>.pprofile{
+    top: 0px;
+    opacity: 0;
+}
+
+.section-global-enemy.mobiletest .profile-nic{
+    height: 285px;
 }
 
 .section-global-enemy.mobiletest .profile-miguel{
-    height: 250px;
+    height: 285px;
 }
 
 .section-global-enemy.mobiletest .profile-yran{
-    height: 250px;
+    height: 285px;
 }
 
 .section-global-enemy.mobiletest .general>.socialmedias{
